@@ -7,7 +7,7 @@
     var decrementCountdown = function (){
       $scope.countdown -=1;
       if($scope.countdown<1){
-        $scope.search($scope.username);
+        //$scope.search($scope.username);
       }
     }
 
@@ -26,7 +26,7 @@
     };
 
     $scope.username = "angular";
-    $scope.countdown = 5;
+    $scope.countdown = 15;
     startCountdown();
   };
 

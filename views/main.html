@@ -1,8 +1,15 @@
-<div>
-	<div ng-show="countdown">{{countdown}}</div>
-	<form name="searchUser" ng-submit="search(username)">
-	  <input type="search" required placeholder="User Name to find" ng-model="username"></input>
-	  <input type="submit" value="Search"></input>
-	  <br>
+<div class="text-center">
+	<!-- <div ng-show="countdown">{{countdown}}</div> -->
+	<p class="text-center">Enter Github User Name to search list of repositories and contributors...</p>
+	<form name="searchUser" ng-submit="search(username)" class="search-user form-inline">		
+		<div class="form-inline form-group">
+			<label for="search">User Name</label>
+		  	<input id="search" class="form-control" type="search" required placeholder="User Name to find" ng-model="username"></input>
+		  	<input type="submit" value="Search" class="btn btn-primary"></input>
+	  	</div>
+	  	<br>
 	</form>
+</div>
+<div class="app-info">
+	<blockquote class="app-info-text">This app developed using Angular and Bootstrap with help of Pluralsight Angular training. This Angular app will read the Github API to search the User Name and providing user's repositories and it's contributors. To download and review the source code, please visit <a href="https://github.com/prageethindika/github-viewer-angular" target="blank"> https://github.com/prageethindika/github-viewer-angular</a></blockquote>
 </div>

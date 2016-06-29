@@ -1,0 +1,37 @@
+.search-user{
+	padding-top: 20px;
+}
+.user-wrapper{
+	width: 600px;
+	margin: auto;
+}
+.user-wrapper .user-image{
+	width: 140px;
+	height: auto;
+}
+.user-wrapper .sort-wrapper{
+	padding: 15px 0;
+}
+.app-info{
+	margin: auto;
+	max-width: 500px;
+	padding-top: 30px;
+}
+.app-info .app-info-text{
+	font-size: 12px;
+	color: #9b9b9b;
+}
+
+.repo-wrapper{
+	margin: auto;
+	max-width: 500px;
+}
+.repo-wrapper .contributor-image{
+	width: 70px;
+	height: auto;
+	margin-bottom: 5px;
+}
+.repo-wrapper .collaborators-list{
+	list-style: none;
+	padding: 20px 25px;
+}

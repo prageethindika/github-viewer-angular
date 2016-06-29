@@ -1,35 +1,48 @@
- <div>
+ <div class="user-wrapper">
   <div>{{error}}</div>
-  <div>Name: {{user.name}}</div>
-  <div>Location: {{user.location}}</div>
-  <div>
-    <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+  <div class="row"><h3 class="col-md-12">User Name: {{user.name}}</h3></div>
+  <div ng-show="!!user.location" class="row"><h4 class="col-md-12">Location: {{user.location}}</h4></div>
+  <div class="text-center">
+    <img class="img-responsive img-thumbnail user-image" ng-src="{{user.avatar_url}}" title="{{user.name}}">
   </div>
-  Order:
-  <select ng-model="repoSortOrder">
-    <option value="+name">Name</option>
-    <option value="-stargazers_count">Starts</option>
-    <option value="+language">Language</option>
-  </select>
-</div>   
-
-<table>
-  <thead>
-    <th>Name</th>
-    <th>Starts</th>
-    <th>Language</th>
-  </thead>
-  <tbody>
-    <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
-      <td>
-        <a href="#/repo/{{user.login}}/{{repo.name}}">
-          {{repo.name}}
-          </a>
-      </td>
-      <td>{{repo.stargazers_count | number}}</td>
-      <td>{{repo.language}}</td>
-    </tr>
-  </tbody>
-</table>
-
-<a href="#/mail">Back to search</a>
+  <div class="sort-wrapper row">
+    <div class="col-md-6">
+      <a href="#/mail"><span class="glyphicon glyphicon-chevron-left"></span> Back to search</a>
+    </div>    
+    <div class="order-wrapper col-md-6 text-right">
+      <label for="order"></label> Order:
+      <select id="order" ng-model="repoSortOrder">
+        <option value="+name">Name</option>
+        <option value="-stargazers_count">Starts</option>
+        <option value="+language">Language</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <th>Repository Name</th>
+          <th>Starts</th>
+          <th>Language</th>
+        </thead>
+        <tbody>
+          <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
+            <td>
+              <a href="#/repo/{{user.login}}/{{repo.name}}">
+                {{repo.name}}
+                </a>
+            </td>
+            <td>{{repo.stargazers_count | number}}</td>
+            <td>{{repo.language}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <a href="#/mail"><span class="glyphicon glyphicon-chevron-left"></span> Back to search</a>
+    </div> 
+  </div>
+</div>
