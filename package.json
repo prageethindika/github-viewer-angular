@@ -1,0 +1,30 @@
+{
+  "name": "github_viewer",
+  "version": "1.0.0",
+  "description": "Angular experiment to load the repositories and contributors from github API",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prageethindika/github-viewer-angular.git"
+  },
+  "keywords": [
+    "github-viewer",
+    "angular",
+    "bootstrap"
+  ],
+  "author": "Prageeth Indika Wijesinghe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prageethindika/github-viewer-angular/issues"
+  },
+  "homepage": "https://github.com/prageethindika/github-viewer-angular#readme"
+}
